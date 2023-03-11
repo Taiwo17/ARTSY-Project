@@ -32,7 +32,7 @@ function FeaturedImages({
           <h2 className='absolute top-[15%] left-[8.44%] font-clash-display font-semibold text-[30px] leading-[37px] text-white md:hidden'>
             {titleOne}
           </h2>
-          <div className='absolute top-[70%] left-[70%] md:hidden'>
+          <div className='absolute top-[70%]  left-[80%] md:hidden'>
             <ArrowPointer />
           </div>
         </div>
@@ -50,10 +50,15 @@ function FeaturedImages({
 
         <div className='flex flex-row justify-between items-center'>
           <div className='flex flex-row gap-[15px] items-center'>
-            <div className='-space-x-4'>
+            <div className='-space-x-2 md:-space-x-4'>
               {imagesLoops.map(({ id, img }) => {
                 return (
-                  <img key={id} className='inline-block' src={img} alt='' />
+                  <img
+                    key={id}
+                    className='inline-block w-[24px] h-[24px] md:w-[42px] md:h-[42px]'
+                    src={img}
+                    alt=''
+                  />
                 )
               })}
             </div>

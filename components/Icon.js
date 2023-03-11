@@ -149,6 +149,7 @@ export function MessageIcon() {
 export function ArrowGrey() {
   return (
     <svg
+      className='w-[39px] h-[39px] md:w-auto md:h-auto'
       width='78'
       height='78'
       viewBox='0 0 78 78'
@@ -169,8 +170,9 @@ export function ArrowGrey() {
 export function ArrowPointer() {
   return (
     <svg
-      width='78'
-      height='80'
+      className=''
+      width='50'
+      height='50'
       viewBox='0 0 78 80'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
@@ -193,6 +195,7 @@ export function ArrowPointer() {
 export function Rounded() {
   return (
     <svg
+      className=''
       width='16'
       height='17'
       viewBox='0 0 16 17'

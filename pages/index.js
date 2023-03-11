@@ -21,6 +21,38 @@ export default function Home() {
     autoplaySpeed: 2000,
     autoplay: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
   return (
     <>
@@ -137,14 +169,17 @@ export default function Home() {
             </div>
           </div>
           <div className='mt-[33px] mb-[21px] lg:mt-0'>
-            <div className='relative bg-event-sub-img bg-cover bg-no-repeat h-full py-[33px] pl-[11px] mx-[34px] md:pl-[22px] md:pr-[22px] lg:h-[546px] lg:bg-event-sub_desktop lg:pt-[299px] lg:mx-[120px] '>
-              <div>
+            <div className='relative   mx-[34px]  lg:h-[546px] lg:bg-event-sub_desktop lg:pt-[299px] lg:mx-[120px] '>
+              <div className=''>
                 <Slider ref={setSlide} {...settings}>
                   {imgSlider.map((eventSlide) => {
                     const { id, title, number, date, content, link, reminder } =
                       eventSlide
                     return (
-                      <div className='pl-2 pt-[33px]' key={id}>
+                      <div
+                        className=' pt-[33px] bg-event-sub-img bg-cover bg-no-repeat py-[33px] pl-[11px] md:pl-[22px] md:pr-[22px] lg:bg-none'
+                        key={id}
+                      >
                         <div className='flex flex-row gap-[29.03px] mb-[26px]'>
                           <Rounded />
                           <p className='font-bellefair font-normal text-[20px] text-white leading-[25px] w-[248px] tracking-normal md:w-full md:text-[30px]'>
@@ -157,8 +192,8 @@ export default function Home() {
                               {number}
                             </p>
                           </div>
-                          <div className='flex flex-col lg:flex-row lg:items-center lg:gap-[118.08px]'>
-                            <div className='flex flex-col gap-[20px]'>
+                          <div className='flex flex-col lg:flex-row lg:items-center lg:gap-[118.08px] '>
+                            <div className='flex flex-col mb-4 gap-[20px] md:mb-0'>
                               <p className='font-poppins font-lighter text-xs leading-[18px] text-white uppercase tracking-widest md:text-sm'>
                                 {date}
                               </p>
@@ -166,7 +201,7 @@ export default function Home() {
                                 {content}
                               </p>
                             </div>
-                            <div className='flex flex-row justify-end gap-[36px]'>
+                            <div className='flex flex-row gap-[36px] md:justify-end'>
                               <button className='font-satoshi font-normal text-sm leading-[19px] underline text-white tracking-wide md:text-base'>
                                 {link}
                               </button>

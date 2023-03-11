@@ -7,11 +7,9 @@ const AppProvider = ({ children }) => {
 
   function openSidebar() {
     setIsSidebarOpen(true)
-    console.log('Open clicked')
   }
   function closeSidebar() {
     setIsSidebarOpen(false)
-    console.log('Close clicked')
   }
 
   return (
